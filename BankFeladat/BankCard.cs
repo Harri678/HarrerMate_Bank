@@ -11,14 +11,16 @@ namespace BankFeladat
 		double accountBalance;
 		string cardNumber;
 
-		public string CardNumber { get; }
-		public double AccountBalance { get; }
-
-		public BankCard(Owner owner, double accountBalance, string cardNumber)
+		public BankCard(Owner owner, double accountBalance, string cardNumber) : base(owner)
 		{
 			this.accountBalance = accountBalance;
 			this.cardNumber = cardNumber;
 		}
+
+		public string CardNumber { get; }
+		public double AccountBalance { get; }
+
+		
 
 		public bool Purchace(double amount)
 		{
